@@ -14,7 +14,7 @@ function App() {
     e.preventDefault();
     setAnswer("Loading your answer... \n It might take upto 10 seconds");
     try {
-      const wdata = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${loca}&appid=2abe0c42024a6c1d90b145991d0b2b41&units=metric`)
+      const wdata = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${loca}&appid=#&units=metric`)
       const data = await wdata.json()
       const sent = `Current weather conditions: ${data.weather[0].description},Temperature:${data.main.temp}degrees Celsius,Humidity:${data.main.humidity}%,Wind speed: ${data.wind.speed}kmph from west,Cloud cover:${data.weather[0].description},Precipitation probability: ${data.clouds.all},Any weather forecasts: (e.g., rain expected later today)
 %`
